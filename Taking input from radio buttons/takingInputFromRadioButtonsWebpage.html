@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<script src="takingInputFromRadioButtons.js">
+
+	</script>
+</head>
+
+<body>
+
+    Select Gender :  <br>
+    <!-- We've to add name="myRadioBtn" to both the radio buttons
+        and keep the 'name' value same for both buttons so that the user
+        cannot check both the radio buttons at the same time.
+        Also, we can add 'checked' for a radiobutton which will keep it 
+        checked by default when the webpage loads.
+    -->
+    <input type="radio" id="rd1" name="myRadioBtn" value="Male"> Male </input> 
+    <br> 
+    <input type="radio" id="rd2" name="myRadioBtn" value="Female"> Female </input>
+    <br> <br>
+    <button onclick="selectGender()"> Submit </button>
+
+</body>
+ 
+</html>

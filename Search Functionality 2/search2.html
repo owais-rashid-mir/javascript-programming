@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+<style>
+	* {
+        box-sizing: border-box;
+      }
+      
+      #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+      }
+      
+      #myTable {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 18px;
+      }
+      
+      #myTable th, #myTable td {
+        text-align: left;
+        padding: 12px;
+      }
+      
+      #myTable tr {
+        border-bottom: 1px solid #ddd;
+      }
+      
+      #myTable tr.header, #myTable tr:hover {
+        background-color: #f1f1f1;
+      }
+</style>
+
+      
+</head>
+
+<body>
+
+    <h2 style="text-align: center; text-transform: uppercase; color:green;">Search </h2>
+
+    <input type="text" name="" id="myInput" placeholder="Search.." onkeyup="searchFun()">
+
+    <table id="myTable" border="1px">
+        <tr class="header">
+            <th style="width: 30%;">Name</th>
+            <th style="width: 40%;">Degree</th>
+            <th style="width: 40%;">Profession</th>
+        </tr>
+
+        <tr>
+            <td >Owais</td>
+            <td>BCA</td>
+            <td>Programmer</td>
+        </tr>
+
+        <tr>
+            <td>suhail</td>
+            <td>Bsc</td>
+            <td>doctor</td>
+        </tr>
+
+        <tr>
+            <td>AMIT</td>
+            <td>mtech</td>
+            <td>engineer</td>
+        </tr>
+
+        <tr>
+            <td style="word-break:break-all;">qwertyuioppppppppppppppppppppppppppppppppppppppppp</td>
+            <td style="word-break:break-all;">asdfghfdddddd fddddfddddddddddddd fdddddddddddd</td>
+            <td style="word-break:break-all;" >engifdfodjsndfffffffffffffeer fsssssssssssssfdddddd</td>
+        </tr>
+
+    </table>
+
+    <script>
+
+        function searchFun(){
+            let filter = document.getElementById('myInput').value.toUpperCase();
+        
+            let myTable = document.getElementById('myTable'); 
+
+            //storing tr of table in a variable of same name.
+            let tr = myTable.getElementsByTagName('tr');
+
+            //looping for reading all table data
+            for(var i=0 ; i<tr.length ; i++) {
+
+                //fetching table data for comparing it with the data entered by user in search bar.
+                let td = tr[i].getElementsByTagName('td')[0];
+
+                if(td){
+                    //textContent - for printing text of table cell only. will ignore the td tags surrounding the data
+                    let textValue = td.textContent || td.innerHTML;
+
+                    //If a table string matches with the user input, display it.
+                    if( textValue.toUpperCase().indexOf(filter) > -1 ) {
+                        tr[i].style.display = "";
+                    }
+
+                    //If a table string(or part of string) does not match with the user input, don't display it
+                    else {
+                        tr[i].style.display= "none";
+                    }
+                }
+
+            }   //end of for loop
+        }
+    
+    </script>
+
+
+</body>
+ 
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<script>
+
+        //Date() fetches the date and time from the system
+        document.write(Date() + "<br>");
+
+        //another way of using Date()
+        var todayDate = new Date();
+        document.write(todayDate + "<br>");
+
+        //getYear() fetches the year along with time and timezone details - just like Date().
+        todayDate.getYear();
+        document.write(todayDate + "<br>");
+        
+        todayDate.setYear(17);
+        document.write(todayDate + "<br>");  //Changes the year to 1917
+
+        todayDate.setYear(2017);    //Changes year to 2017
+        document.write(todayDate);
+
+	</script>
+</head>
+
+<body>
+
+</body>
+ 
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script type = "text/javascript">
+    
+    function selectOS() {
+        var s = document.getElementById("selectbox");
+        alert("Your OS is : " + s.options[s.selectedIndex].value);
+        /*  s.selectIndex in the above line is the index. If, for e.g, 
+             we write '2' (without quotes) instead of s.selectIndex
+             in the square brackets, only 'Mac' would be printed.
+        */
+
+        /*  we can also write the above code as:
+            var s = document.getElementById("selectbox").value;
+            alert("Your OS is : " + s); 
+            But prefer the first technique as it is used by everyone.
+        */
+
+    }
+
+	</script>
+</head>
+
+<body>
+
+    Select your Operating System <br>
+    <select id="selectbox">
+        <option value = "Windows"> Windows </option>
+        <option value = "Linux"> Linux </option>
+        <option value = "Mac"> Mac </option>
+    </select>
+    <br> <br>
+    
+  
+    <button onclick="selectOS()"> Submit </button>
+
+</body>
+ 
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<title> Admission Form</title>
+
+<head>
+	<script src="admissionFormCode.js">
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="admissionFormStylesheet.css"> 
+</head>
+
+<h2> <center> Admission Form </center> </h2>
+
+<body>
+
+    <br>
+    <center>
+
+    <!-- Don't run this form with VS COde's LIVE SERVER extension. Doesn't
+        work for some reason. Just run it normally by launching it
+        from your File Explorer and running it in your browser. 
+    -->
+    <form id="myForm" action="messageWebpage.html" method="post" onSubmit="return validateForm();">
+
+    Name: <br>
+    <input type = "text" id="name"> <br> <br>
+
+    Registration Number: <br>
+    <input type = "text" id="regNo"> <br> <br>
+
+    Select Course: <br>
+    <select id="selectbox">
+        <option value = "-1" selected> [choose yours] </option>
+        <option value = "1"> BCA </option>
+        <option value = "2"> B.Sc </option>
+        <option value = "3"> B.A </option>
+        <option value = "4"> BBA </option>
+    </select> <br> <br>
+
+    Phone Number: <br>
+    <input type = "number" id="phone"> <br> <br>
+
+    Email: <br>
+    <input type = "email" id="email" placeholder="ex: name@example.com"> <br> <br> <br>
+
+    <button type = "submit"> Submit </button>
+
+    </form>
+    </center>
+
+</body>
+
+</html>

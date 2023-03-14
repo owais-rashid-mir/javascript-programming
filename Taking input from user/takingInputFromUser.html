@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script type="text/javascript">
+    
+    function fn1(){
+        var str = document.getElementById("text1").value;
+        document.write("You entered : " + str);
+    }
+
+	</script>
+</head>
+
+<body>
+
+    <!-- If you write name="text1" instead of id="text1"
+    in <input> , you won't be able to use getElementsById -->
+    <input type="text" id="text1" placeholder="Enter Something">
+    <br> <br>
+
+    <button onclick="fn1()"> Submit </button>
+
+</body>
+ 
+</html>

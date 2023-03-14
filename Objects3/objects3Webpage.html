@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<script>
+
+        //Updating and deleting properties of an object.
+        var student = {
+
+        name : "Owais",
+        age : 21,
+        gender : "Male",
+
+        studentInfo : function() {
+            document.write(student.name + "<br>" + student.age + "<br>" + student.gender + "<br>");
+        }
+
+        };
+
+        student.name="Suhail";  //Updating property.
+        student.studentInfo();
+
+        document.write("<br>");
+
+        //We can also change the datatype of properties.
+        student.age="qwerty";   //age was a Number. Now it's changed to a String.
+        student.studentInfo();
+
+        document.write("<br>");
+
+        //Deleting a property.
+        delete student.gender;
+        student.studentInfo(); 
+
+
+
+	</script>
+</head>
+
+<body>
+
+</body>
+ 
+</html>
