@@ -1,8 +1,95 @@
+/* Styling for the entire document */
 body {
-
-	color:white;
-	background-color: #2C8F77;
-	border: solid 2px black;
-	font-family : sans-serif, bold, Arial;
-	
-}
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Styling for the heading */
+  h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+  }
+  
+  /* Styling for the form */
+  form {
+    margin: auto;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+  }
+  
+  /* Styling for the form labels */
+  form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Styling for the form inputs */
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="number"],
+  form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Styling for the form inputs when in focus */
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form input[type="number"]:focus,
+  form select:focus {
+    outline: none;
+    box-shadow: 0 0 5px #b2d0e5;
+  }
+  
+  /* Styling for the form button */
+  form button[type="submit"] {
+    background-color: #3fa9f5;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Styling for the form button on hover */
+  form button[type="submit"]:hover {
+    background-color: #1e87d4;
+  }
+  
+  /* Styling for the error message */
+  .error {
+    color: red;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  /* Styling for the select dropdown arrow */
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 14px 14px;
+    padding-right: 30px;
+  }
+  
